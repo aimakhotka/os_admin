@@ -48,7 +48,7 @@ while true ; do
     case $number in
         0) echo -e "No students\n" ;;
         1) echo -e "1 student\n" ;;
-        [2-4]*) echo -e "$number students\n" ;;
+        [2-4]) echo -e "$number students\n" ;;
         *) echo -e "A lot of students\n"
     esac
 
