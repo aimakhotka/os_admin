@@ -57,6 +57,8 @@ done
   
 </details>
 
+![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_1.png)
+
 ## Задание №3
 <details> <summary>Задание</summary>
   
@@ -109,7 +111,8 @@ while true; do
     fi
 done
   ```
-   
+  ![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_2.png)
+  
  </details>
 
 ## Задание №4
@@ -169,3 +172,5 @@ done
   ```
    
  </details>
+
+![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_3.png)
