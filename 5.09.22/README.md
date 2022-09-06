@@ -82,7 +82,7 @@ your name:" и ждать от пользователя ввода имени (�
  <details> <summary>Код</summary>
   
   ```
-   #!/bin/bash
+#!/bin/bash
 
 while true; do
     echo 'To exit, press "Enter"'
@@ -95,17 +95,17 @@ while true; do
 
     echo 'Enter your age: '; read age
 
-    case $age in
-        [[:digit:]]) continue ;;
-        *) echo "Syntax Error. Try again."; break ;;
-    esac
+    if [[ $age -ge 0 ]]; then
 
-    if [[ $age -le 16 ]]; then
-        echo "$name, your group is child"
-    elif [ $age -ge 17 ] && [ $age -le 25 ]; then
-        echo "$name, your group is youth"
+        if [[ $age -le 16 ]]; then
+            echo "$name, your group is child"
+        elif [ $age -ge 17 ] && [ $age -le 25 ]; then
+            echo "$name, your group is youth"
+        else
+            echo "$name, your group is adult"
+        fi
     else
-        echo "$name, your group is adult"
+        echo "Error in the number. Try again"
     fi
 done
   ```
@@ -116,7 +116,7 @@ done
  <details> <summary>Задание</summary>
   
   ```
-Напишите скрипт на bash, который будет искать наибольший общий делитель
+   Напишите скрипт на bash, который будет искать наибольший общий делитель
 (НОД, greatest common divisor, GCD) двух чисел.
 После ввода чисел скрипт считает их НОД и выводит на экран
 сообщение "GCD is <посчитанное значение>", например, для чисел 15 и 25
