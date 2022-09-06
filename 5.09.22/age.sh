@@ -11,7 +11,7 @@ while true; do
 
     echo 'Enter your age: '; read age
 
-    if [[ $age -gt 0 ]]; then
+    if [[ $age -eq 0 ]]; then
         echo "bye"
         break
 
@@ -26,6 +26,6 @@ while true; do
 
     else
         echo "Error in the number. Try again"
-        
+
     fi
 done
