@@ -119,7 +119,8 @@ done
   ```
   
  </details>
-  ![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_2.png)
+  
+![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_2.png)
 
 ## Задание №4
  <details> <summary>Задание</summary>
