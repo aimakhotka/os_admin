@@ -83,6 +83,7 @@ your name:" и ждать от пользователя ввода имени (�
  
  <details> <summary>Код</summary>
   
+  
   ```
 #!/bin/bash
 
@@ -116,10 +117,9 @@ while true; do
     fi
 done
   ```
-   
-![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_2.png)
   
  </details>
+  ![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_2.png)
 
 ## Задание №4
  <details> <summary>Задание</summary>
