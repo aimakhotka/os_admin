@@ -97,8 +97,10 @@ while true; do
 
     echo 'Enter your age: '; read age
 
-    if [[ $age -ge 0 ]]; then
-
+    if [[ $age -gt 0 ]]; then
+        echo "bye"
+        break
+    elif [[ $age -gt 0 ]]; then
         if [[ $age -le 16 ]]; then
             echo "$name, your group is child"
         elif [ $age -ge 17 ] && [ $age -le 25 ]; then
