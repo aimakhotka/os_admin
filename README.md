@@ -1,4 +1,4 @@
-# ansible
+# Ansible
 Основы работы с сетевыми операционными системами (Левченко Н.А.)
 
 - [4 лабораторная работа (Балансировка Round-Robin)](https://github.com/dif-dif/ansible/tree/master/lab4_nginx)
