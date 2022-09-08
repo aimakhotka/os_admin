@@ -57,7 +57,7 @@ done
   
 </details>
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_1.png)
+![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/1.png)
 
 ## Задание №3
 <details> <summary>Задание</summary>
@@ -116,7 +116,7 @@ while true; do
     fi
 done
   ```
-  ![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_2.png)
+  ![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/2.png)
   
  </details>
 
@@ -178,4 +178,4 @@ done
    
  </details>
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/master/img/05.09_3.png)
+![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/3.png)
