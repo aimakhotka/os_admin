@@ -1,0 +1,55 @@
+---
+# tasks file for haproxy
+- name: Install Epel-release from repo
+  yum:
+    name: epel-release
+    state: present
+
+- name: Install Keepalived
+  yum:
+    name: keepalived
+    state: latest
+  tags:
+    - keepalived-install
+
+- name: Install HAProxy
+  yum:
+    name: haproxy
+    state: latest
+  tags:
+    - haproxy-install
+
+#- name: Allow binding non-local IPv4
+#  lineinfile: dest=/etc/sysctl.conf
+#    regexp=''
+#    insertafter=EOF
+#    line='net.ipv4.ip_nonlocal_bind=1'
+
+- name: allow binding non-local IPv4
+  sysctl:
+    name: net.ipv4.ip_nonlocal_bind
+    value: "{{ keepalived_ip_nonlocal_bind | string }}"
+    reload: true
+    state: present
+  when: keepalived_ip_nonlocal_bind | bool
+  tags:
+    - sysctl
+
+- name: Config HAProxy
+  template:
+    src: haproxy.cfg.j2
+    dest: /etc/haproxy/haproxy.cfg
+  notify: 
+    - restart haproxy
+  tags: 
+    - haproxy-conf
+
+- name: Config Keepalived
+  template:
+    src: keepalived.conf.j2
+    dest: /etc/keepalived/keepalived.conf
+  notify:
+    - restart keepalived
+  tags:
+    - keepalived-conf
+  with_items: "{{ groups['haproxys'] }}"

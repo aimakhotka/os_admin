@@ -1,0 +1,24 @@
+vagrant up pg1 &
+vagrant up pg2 &
+vagrant up dcs1 &
+vagrant up dcs2 &
+vagrant up dcs3 &
+vagrant up nfs &
+
+
+
+1. Убираем шатбауны с интерфейсов
+int eth0/0
+no shut
+end
+wr mem
+
+cdp
+sh neighbors ethernet *интерфейсы*
+
+interface 
+
+
+running-config interface gi0/0 #физические интерфейсы. вкл информацию о логических группах
+show runing-config interface Port-Channel1 #логические интерфейсы
+

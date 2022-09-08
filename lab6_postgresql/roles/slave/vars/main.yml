@@ -1,0 +1,6 @@
+---
+# vars file for slave
+
+address: '192.168.21.111'
+pathtofiles: /var/lib/pgsql/14/data/
+db_password: 'pass'

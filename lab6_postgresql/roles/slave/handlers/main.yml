@@ -1,0 +1,8 @@
+---
+# handlers file for slave
+
+- name: started_postgresql-14
+  systemd:
+    name: postgresql-14
+    state: started
+    enabled: yes

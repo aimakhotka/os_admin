@@ -1,0 +1,3 @@
+---
+# vars file for haproxy
+keepalived_ip_nonlocal_bind: 1

@@ -1,0 +1,7 @@
+---
+# handlers file for master
+- name: restart_postgresql-14
+  systemd:
+    name: postgresql-14
+    state: restarted
+    enabled: yes
