@@ -8,7 +8,7 @@
   ```
 
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/1.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/1.png)
 
 ## Задание №2
   
@@ -23,7 +23,7 @@ user2 в обе эти группы. Используйте одиночную �
   ```
   
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/2.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/2.png)
 
 ## Задание №3
   
@@ -35,8 +35,8 @@ user2 в обе эти группы. Используйте одиночную �
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/3.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/3_1.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/3.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/3_1.png)
 
 ## Задание №4
   
@@ -49,9 +49,9 @@ user2 в обе эти группы. Используйте одиночную �
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/4.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/4_1.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/4_2.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/4.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/4_1.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/4_2.png)
 
 
 ## Задание №5
@@ -62,7 +62,7 @@ user2 в обе эти группы. Используйте одиночную �
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/5.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/5.png)
 
 ## Задание №6
   
@@ -76,9 +76,9 @@ user2 в обе эти группы. Используйте одиночную �
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/6.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/6_1.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/6_2.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/6.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/6_1.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/6_2.png)
 
 
 ## Задание №7
@@ -91,7 +91,7 @@ user2 в обе эти группы. Используйте одиночную �
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/7.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/7.png)
 
 ## Задание №8
   
@@ -113,8 +113,8 @@ dmesg• /usr/bin/whoami
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/8.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/8_1.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/8.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/8_1.png)
 
 
 ## Задание №9
@@ -124,7 +124,7 @@ dmesg• /usr/bin/whoami
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/9.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/9.png)
 
 ## Задания №10-12
   
@@ -144,8 +144,8 @@ cron, которое будет создавать список всех пол�
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/10.png)
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/10_1.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/10.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/10_1.png)
 
 ## Задание №13
   
@@ -157,7 +157,7 @@ cron, которое будет создавать список всех пол�
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/13.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/13.png)
 
 ## Задание №14
   
@@ -169,4 +169,4 @@ cron, которое будет создавать список всех пол�
   
   ```
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/lab2_commands/img/14.png)
+![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/14.png)
