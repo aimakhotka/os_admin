@@ -5,4 +5,4 @@
 
 - [2 лабораторная работа (Командная строка Linux)](https://github.com/dif-dif/os_admin/tree/third_semester/lab2_commands)
 
-- [3 лабораторная работа (Командная строка Linux)](https://github.com/dif-dif/os_admin/tree/third_semester/lab3_docker)
+- [3 лабораторная работа (Докер)](https://github.com/dif-dif/os_admin/tree/third_semester/lab3_docker)
