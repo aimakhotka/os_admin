@@ -29,8 +29,8 @@ ansible-playbook pg.yml
 
 ### Скриншоты работоспособности
 - Заходим на ноду, убеждаемся, что slave в роли Sync Standby
-![Статус](https://github.com/dif-dif/ansible/blob/master/pictures/lab7_1.png)
+![Статус](https://github.com/dif-dif/os_admin/tree/second_semester/pictures/lab7_1.png)
 - Меняем мастера, чтобы убедиться, что патрони работает как надо
-![switchover](https://github.com/dif-dif/ansible/blob/master/pictures/lab7_2.png)
+![switchover](https://github.com/dif-dif/os_admin/tree/second_semester/pictures/lab7_2.png)
 - Спустя некоторое время роль второй ноды стала Sync Standby
-![switchover](https://github.com/dif-dif/ansible/blob/master/pictures/lab7_3.png)
+![switchover](https://github.com/dif-dif/os_admin/tree/second_semester/pictures/lab7_3.png)
