@@ -1,0 +1,54 @@
+---
+# tasks file for web
+
+- name: Install software
+  yum:
+    name: 
+      - epel-release
+      - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+      - nano
+      - net-tools
+    state: present
+    
+- name: Install nginx from repo
+  yum:
+    name: 
+      - nginx
+      - php-fpm
+      - libpq
+      - php-pgsql
+    state: present
+
+- name: Copy nginx configuration file
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
+- name: Copy index php file
+  copy:
+    src: index.php
+    dest: /usr/share/nginx/html/index.php
+    
+- name: Copy php-fpm configuration file
+  copy:
+    src: php-fpm
+    dest: /etc/php-fpm.d/www.conf 
+  notify:
+    - restart php
+
+- name: Disable SElinux
+  copy:
+    src: config
+    dest: /etc/selinux/config
+
+- name: Enable nginx service and start it
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
+    
+- name: Enable php service and start it
+  systemd:
+    name: php-fpm
+    state: started
+    enabled: yes

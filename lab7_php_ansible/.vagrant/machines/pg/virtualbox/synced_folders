@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/alla/Documents/github/os_admin/lab7_php_ansible","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}

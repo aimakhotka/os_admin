@@ -1,0 +1,5 @@
+[webserver]
+web ansible_host=192.168.56.2
+
+[database]
+pg ansible_host=192.168.56.3

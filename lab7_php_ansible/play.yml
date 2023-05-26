@@ -1,0 +1,9 @@
+- name: Nginx PHP
+  hosts: webserver
+  roles:
+    - web
+
+- name: Postgres
+  hosts: database
+  roles:
+    - pg

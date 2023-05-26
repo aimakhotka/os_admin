@@ -1,0 +1,85 @@
+####### WEB #########
+
+yum install -y nano epel-release nginx
+yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+yum install -y nginx php-pgsql php-fpm libpq
+nano /etc/php-fpm.d/www.conf
+### меняем user и group на nginx. listen = 127.0.0.1:9000
+systemctl start php-fpm.service
+systemctl enable php-fpm.service
+nano /etc/nginx/nginx.conf
+### добавляем еще один location
+------------------------------------
+location ~ .php$ {
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
+        try_files $uri =404;
+        }
+------------------------------------
+### добавляем в основной блок server строчку "index index.php", комментируем или удаляем строчку "listen  [::]:80"
+nano /usr/share/nginx/html/index.php
+------------------------------------
+ФАЙЛ INDEX.PHP
+------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> POstgres select</title>
+
+</head>
+<body>
+    <?php
+    $db = pg_connect("host=192.168.56.3 port=5432 dbname=demo user=postgres password=postgres");
+    $result = pg_query($db, "select * from airports limit 5");
+echo "<table border=2>";
+while($row=pg_fetch_assoc($result)){echo "<tr>";
+    echo "<td align= 'center' width='200'> " . $row['airport_code'] . "</td>";
+    echo "<td align= 'center' width='200'> " . $row['airport_name'] . "</td>";
+    echo "<td align= 'center' width='200'> " . $row['city'] . "</td>";
+    echo "<td align= 'center' width='200'> " . $row['coordinates'] . "</td>";
+    echo "<td align= 'center' width='200'> " . $row['timezone'] . "</td>";
+    echo "<td align= 'center' width='200'> " . $row['airport_code'] . "</td>";
+    echo "</tr>";} 
+    echo "</table>";
+?>
+</div>
+</body>
+</html>
+------------------------------------
+sestatus
+nano /etc/selinux/config
+### меняем enabled на disabled
+systemctl start nginx
+systemctl enable nginx
+
+
+###### PG ##########
+yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+yum -y install postgresql14-server nano wget unzip net-tools
+postgresql-14-setup initdb
+nano /var/lib/pgsql/14/data/postgresql.conf
+--------------------------------
+listen_addresses = '*'
+--------------------------------
+nano /var/lib/pgsql/14/data/pg_hba.conf
+--------------------------------
+host    all             all             0.0.0.0/0               md5
+--------------------------------
+systemctl start postgresql-14.service 
+systemctl enable postgresql-14
+su - postgres
+wget https://edu.postgrespro.ru/demo-small.zip 
+unzip demo-small.zip
+psql -f demo-small-20170815.sql
+psql
+\password postgres
+### пароль postgres
+exit
+exit
+systemctl restart postgresql-14.service 
+
+
+
