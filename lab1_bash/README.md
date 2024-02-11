@@ -1,15 +1,12 @@
-# Лабораторная работа №1
-## Задание №2
-<details> <summary>Задание</summary>
+# Lab Report No. 1
+## Task No. 2
+<details> <summary>Task</summary>
   
   ```
-  Напишите скрипт на bash, который ожидает ввода с клавиатуры один
-аргумент (целое число от 0 до бесконечности), который будет
-обозначать число студентов в аудитории. В зависимости от значения
-числа нужно вывести разные сообщения.
-Соответствие входа и выхода должно быть таким:
+  Write a bash script that waits for input from the keyboard for one argument (an integer from 0 to infinity), which will represent the number of students in the classroom. Depending on the value of the number, different messages should be displayed.
+The correspondence between input and output should be as follows:
   
-Вход Выход
+Input Output
   
 0 No students
   
@@ -21,13 +18,13 @@
   
 4 4 students
   
-5 и больше A lot of students
+5 и more A lot of students
   
   ```
   
 </details>
 
-<details> <summary>Код</summary>
+<details> <summary>Code</summary>
   
   ```
 #!/bin/bash
@@ -57,31 +54,22 @@ done
   
 </details>
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/1.png)
+![Status](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/1.png)
 
-## Задание №3
-<details> <summary>Задание</summary>
+## Task No.  №3
+<details> <summary>Task</summary>
   
   ```
-  Напишите скрипт на bash, который будет определять в какую возрастную группу
-попадают пользователи. При запуске скрипт должен вывести сообщение "enter
-your name:" и ждать от пользователя ввода имени (используйте read, чтобы
-прочитать его). Когда имя введено, то скрипт должен написать "enter your age:"
-и ждать ввода возраста (опять нужен read). Когда возраст введен, скрипт пишет
-на экран "<Имя>, your group is <группа>", где <группа> определяется на основе
-возраста по следующим правилам:
-• младше либо равно 16: "child",
-• от 17 до 25 (включительно): "youth",
-• старше 25: "adult".
-После этого скрипт опять выводит сообщение "enter your name:" и всё
-начинается по новой. Если в какой-то момент работы скрипта будет введено
-пустое имя или возраст 0, то скрипт должен написать на экран "bye" и
-закончить свою работу.
+  Write a bash script that determines which age group users fall into. Upon execution, the script should display the message "enter your name:" and wait for the user to enter their name (use `read` to read it). When the name is entered, the script should print "enter your age:" and wait for the age to be entered (again, using `read`). After entering the age, the script writes to the screen "<Name>, your group is <group>", where <group> is determined based on the age according to the following rules:
+- 16 or younger: "child",
+- 17 to 25 (inclusive): "youth",
+- over 25: "adult".
+After that, the script again displays the message "enter your name:" and the process starts anew. If at any point during the script's operation an empty name or age 0 is entered, the script should print "bye" to the screen and terminate its operation.
   ```
   
  </details>
  
- <details> <summary>Код</summary>
+ <details> <summary>Code</summary>
   
   ```
 #!/bin/bash
@@ -116,35 +104,22 @@ while true; do
     fi
 done
   ```
-  ![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/2.png)
+  ![Status](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/2.png)
   
  </details>
 
-## Задание №4
- <details> <summary>Задание</summary>
+## Task No. 4
+ <details> <summary>Task</summary>
   
   ```
-   Напишите скрипт на bash, который будет искать наибольший общий делитель
-(НОД, greatest common divisor, GCD) двух чисел.
-После ввода чисел скрипт считает их НОД и выводит на экран
-сообщение "GCD is <посчитанное значение>", например, для чисел 15 и 25
-это будет "GCD is 5". После этого скрипт опять входит в режим ожидания двух
-натуральных чисел. Если в какой-то момент работы пользователь ввел вместо
-этого пустую строку, то нужно написать на экран "bye" и закончить свою
-работу.
-Вычисление НОД несложно реализовать с помощью алгоритма Евклида. Вам
-нужно написать функцию gcd, которая принимает на вход два аргумента
-(назовем их M и N). Если аргументы равны, то мы нашли НОД -- он
-равен M (или N), нужно выводить соответствующее сообщение на экран (см.
-выше). Иначе нужно сравнить аргументы между собой. Если M больше N, то
-запускаем ту же функцию gcd, но в качестве первого аргумента передаем (M-
-N), а в качестве второго N. Если же наоборот, M меньше N, то запускаем
-функцию gcd с первым аргументом M, а вторым (N-M).
+   Write a bash script that will find the greatest common divisor (GCD) of two numbers. After entering the numbers, the script calculates their GCD and displays the message "GCD is <calculated value>" on the screen. For example, for numbers 15 and 25, it will be "GCD is 5". After that, the script enters the waiting mode again for two natural numbers. If at any point during its operation the user enters an empty line instead, it should display "bye" on the screen and terminate its operation.
+
+Calculating the GCD can be implemented using the Euclidean algorithm. You need to write a function `gcd` that takes two arguments (let's call them M and N). If the arguments are equal, then we have found the GCD -- it is equal to M (or N), and the corresponding message should be displayed on the screen (see above). Otherwise, we need to compare the arguments. If M is greater than N, then we call the same `gcd` function, but we pass (M-N) as the first argument and N as the second argument. If, on the other hand, M is less than N, then we call the `gcd` function with M as the first argument and (N-M) as the second argument.
   ```
    
  </details>
   
- <details> <summary>Код</summary>
+ <details> <summary>Code</summary>
   
   ```
    #!/bin/sh
@@ -178,4 +153,4 @@ done
    
  </details>
 
-![Статус](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/3.png)
+![Status](https://github.com/dif-dif/os_admin_3/blob/third_semester/05.09_bash/img/3.png)
