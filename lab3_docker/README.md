@@ -8,7 +8,7 @@ Once the image is built, push it to Docker Hub and provide a link to your reposi
   
   ```
 
-- [Ссылка на Docker Hub](https://hub.docker.com/repository/docker/amakhotka/nginx_test)
+- [Link to Docker Hub](https://hub.docker.com/repository/docker/amakhotka/nginx_test)
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab3_docker/img/1.png)
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab3_docker/img/2.png)
