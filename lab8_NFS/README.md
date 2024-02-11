@@ -1,31 +1,31 @@
-# Лабораторная работа №8
+# Lab Report No. 8
 
-## Задача
->1. Добавить к предыдущему Vagrantfile еще один сервер NFS с дополнительным диском. На этом сервере настроить шаринг папки с помощью NFS на сервера с БД. На серверах БД эта папка должна быть примонтирована по пути /pgsql/pg_backup
->2. Настроить архивирование WAl файлов с помощью утилиты pg_probackup
->3. Все операции должны выполняться через плейбук
+## Task
+>1. Add another NFS server with an additional disk to the previous Vagrantfile. Configure sharing a folder using NFS on the database servers. This folder should be mounted on the database servers at the path /pgsql/pg_backup.
+>2. Configure WAL file archiving using the pg_probackup utility
+>3. All operations should be performed through a Ansible playbook.
 
 
 
-## Как запустить Ansible-сценарий
+## How to Run Ansible Script
 
-1. Склонировать репозиторий
+1. Clone the repository
 ``` 
 git clone https://github.com/dif-dif/ansible.git 
 ```
-2. Открыть в терминале папку lab8_nfs
-3. Отредактировать в Vagrantfile ip адреса (при необходимости) и путь до вашего публичного ssh ключа
+2. Open the lab8_nfs folder in the terminal.
+3. Edit the IP addresses in the Vagrantfile (if necessary) and the path to your public SSH key
 >("/home/sirius/.ssh/id_rsa.pub")
-3. Поднять виртуалку
+3. Bring up the virtual machines.
 ```
 vagrant status (убеждаемся что машины существуют, но не запущены)
 vagrant up
 ```
-4. Запустить плейбук
+4. Run the playbook.
 ```
 ansible-playbook pg.yml
 ```
 
-### Скриншоты работоспособности
-- Заходим на ноду, убеждаемся, что patroni и система бэкапов работает
+### Functionality Screenshots
+- Access the node and verify that Patroni and the backup system are operational.
 ![Статус](https://github.com/dif-dif/ansible/blob/master/pictures/lab8_1.png)
