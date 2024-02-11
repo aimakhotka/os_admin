@@ -1,8 +1,8 @@
-# Основы работы с сетевыми операционными системами (Левченко Н.А.)
-## Третий семестр
+# Basics of Working with Network Operating Systems (N.A. Levchenko)
+## Third Semester
 
-- [1 лабораторная работа (Основы bash)](https://github.com/dif-dif/os_admin/tree/third_semester/lab1_bash)
+- [Lab Report 1 (Bash Basics)](https://github.com/dif-dif/os_admin/tree/third_semester/lab1_bash)
 
-- [2 лабораторная работа (Командная строка Linux)](https://github.com/dif-dif/os_admin/tree/third_semester/lab2_commands)
+- [Lab Report 2 (Linux Command Line)](https://github.com/dif-dif/os_admin/tree/third_semester/lab2_commands)
 
-- [3 лабораторная работа (Докер)](https://github.com/dif-dif/os_admin/tree/third_semester/lab3_docker)
+- [Lab Report 3 (Docker)](https://github.com/dif-dif/os_admin/tree/third_semester/lab3_docker)
