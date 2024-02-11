@@ -1,4 +1,4 @@
-# Лабораторная работа №4
+# Lab Report No. 4
 
 ## Task
 >1. Install Nginx on servers rrobin, web1, and web2.
