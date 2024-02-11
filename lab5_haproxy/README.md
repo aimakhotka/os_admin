@@ -1,37 +1,37 @@
-# Лабораторная работа №5
+# Lab Report No. 5
 
-## Задача
->1. На серверах web1, web2 установить Nginx.
->2. На серверах haproxy1, haproxy2 установить и настроить  отказоустойчивую связку HAProxy+Keepalived. Настроить VIP с помощью Keepalived в соответствии со схемой
->3. На серверах web1, web2 Nginx должен работать по порту 8080 и отдавать кастомную страницу, зайдя на которую можно понять на каком сервере вы находитесь.
->4. На серверах с HAProxy ПО должно обеспечить балансировку нагрузки серверов web1 и web2 в режиме round-robin. Сделать таймауты ожидания ответа web1 и web2 как можно меньше. Скажем, 1-2 секунды
->5. Установка и настройка всего ПО должна быть обеспечена Ansible-сценарием.
->6. Все файлы по этому заданию выложить в Github и написать ReadMe со скринами работоспособности и инструкцию по запуску вашего Ansible-сценария.
+## Task
+>1. Install Nginx on servers web1 and web2.
+>2. Install and configure resilient pair HAProxy+Keepalived on servers haproxy1 and haproxy2. Configure VIP using Keepalived according to the scheme.
+>3. Nginx on servers web1 and web2 should work on port 8080 and serve a custom page that indicates which server you are on.
+>4. HAProxy software on servers should balance the load between servers web1 and web2 in round-robin mode. Set the timeouts for waiting for responses from web1 and web2 as short as possible, say, 1-2 seconds.
+>5. Installation and configuration of all software should be provided by an Ansible script.
+>6. Upload all files for this task to Github and write a ReadMe with screenshots of functionality and instructions for running your Ansible script.
 
 
-## Как запустить Ansible-сценарий
+## How to Run Ansible Script
 
-1. Склонировать репозиторий
+1. Clone the repository
 ``` 
 git clone https://github.com/dif-dif/ansible.git 
 ```
-2. Открыть в терминале папку lab5_haproxy
-3. Отредактировать в Vagrantfile ip адреса (при необходимости) и путь до вашего публичного ssh ключа
+2. Open the lab5_haproxy folder in the terminal.
+3. Edit the IP addresses in the Vagrantfile (if necessary) and the path to your public SSH key
 >("/home/sirius/.ssh/id_rsa.pub")
-4. Поднять виртуалку
+4. Bring up the virtual machines.
 ```
 vagrant status (убеждаемся что машины существуют, но не запущены)
 vagrant up
 ```
-5. Запустить плейбук
+5. Run the playbook.
 ```
 ansible-playbook nginx.yml
 ```
 
-### Скриншоты работоспособности балансировки
-- Одну виртуалку с haproxy выключаем. Видим, что оба веб-сервера доступны.
-![Веб1](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_1.png)
-![Веб2](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_2.png)
-- Включаем виртуалку из предыдущего шага, и выключаем вторую. Видим, что Virtual IP перебросился на другой сервер haproxy. Оба веб-сервера все еще доступны.
-![Веб1](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_3.png)
-![Веб2](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_4.png)
+### Load Balancing Functionality Screenshots
+- Turn off one virtual machine with haproxy. We see that both web servers are accessible.
+![Web1](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_1.png)
+![Web2](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_2.png)
+- Turn on the virtual machine from the previous step and turn off the second one. We see that the Virtual IP has been transferred to another haproxy server. Both web servers are still accessible.
+![Web1](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_3.png)
+![Web2](https://github.com/dif-dif/ansible/blob/master/pictures/lab5_4.png)
