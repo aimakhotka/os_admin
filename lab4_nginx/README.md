@@ -1,40 +1,40 @@
 # Лабораторная работа №4
 
-## Задача
->1. На серверах rrobin, web1, web2 установить nginx.
->2. На серверах web1, web2 Nginx должен работать по порту 8080 и отдавать кастомную страницу, зайдя на которую можно понять на каком сервере вы находитесь.
->3. На сервере rrobin Nginx должен обеспечить балансировку нагрузки серверов web1 и web2 в режиме round-robin. Вес каждого сервера одинаковый.
->4. Установка и настройка всего ПО должна быть обеспечена Ansible-сценарием.
->5. Все файлы по этому заданию выложить в Github и написать ReadMe со скринами работоспособности и инструкцию по запуску вашего Ansible-сценария
+## Task
+>1. Install Nginx on servers rrobin, web1, and web2.
+>2. Configure Nginx on servers web1 and web2 to operate on port 8080 and serve a custom page that allows determining which server you are on.
+>3. Configure Nginx on server rrobin to balance the load between servers web1 and web2 using round-robin mode. Each server's weight should be equal.
+>4. Installation and configuration of all software should be provided by an Ansible playbook.
+>5. All files for this task should be uploaded to GitHub, accompanied by a ReadMe file containing descriptions, screenshots of functionality, and instructions for running the Ansible playbook.
 
 
-## Как запустить Ansible-сценарий
+## How to run the Ansible playbook:
 
-1. Склонировать репозиторий
+1. Clone the repository:
 ``` 
 git clone https://github.com/dif-dif/ansible.git 
 ```
-2. Открыть в терминале папку lab4_nginx
-3. Отредактировать в Vagrantfile ip адреса (при необходимости) и путь до вашего публичного ssh ключа
->("/home/sirius/.ssh/id_rsa.pub")
-4. Поднять виртуалку
+2. Navigate to the lab4_nginx directory in the terminal.
+3. Edit the IP addresses in the Vagrantfile (if necessary) and set the path to your public SSH key (/home/sirius/.ssh/id_rsa.pub).
+4. Start the virtual machines:
 ```
 vagrant status (убеждаемся что машины существуют, но не запущены)
 vagrant up
 ```
-5. Запустить плейбук
+5. Run the playbook.
 ```
 ansible-playbook nginx.yml
 ```
 
-### Скриншоты работоспособности
-- Поднимаем виртуалку
-![Поднимаем виртуалку](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_0.png)
-- Запускаем плейбук
-![Запускаем плейбук](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_2.png)
-- В итоге обращаемся по ip балансировщика и получаем это. При обновлении страницы будет происходить балансировка и мы будем попадать на разные страницы (на разных серверах)
-![В итоге получаем это](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_113.1.png)
-![В итоге получаем это](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_113.2.png)
-- Также эти страницы доступны по адресам серверов по порту 8080
-![В итоге получаем это](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_111.png)
-![В итоге получаем это](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_112.png)
+### 
+Screenshots of functionality
+- Bringing up the virtual machine
+![Bringing up the virtual machine](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_0.png)
+- Running the playbook
+![Running the playbook](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_2.png)
+- As a result, we access the IP of the load balancer and get this. Upon refreshing the page, load balancing occurs, and we end up on different pages (on different servers).
+![In the end, we get this.](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_113.1.png)
+![In the end, we get this.](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_113.2.png)
+- These pages are also accessible at server addresses on port 8080.
+![In the end, we get this.](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_111.png)
+![In the end, we get this.](https://github.com/dif-dif/ansible/blob/master/pictures/lab4_112.png)
