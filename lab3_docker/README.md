@@ -2,11 +2,9 @@
 ## Задание
   
   ```
-Создайте свой кастомный образ nginx на базе alpine. После запуска nginx
-должен отдавать кастомную страницу (достаточно изменить дефолтную
-страницу nginx)
-Собранный образ необходимо запушить в docker hub и дать ссылку на ваш
-репозиторий.
+Create your custom nginx image based on Alpine. After launching, nginx should serve a custom page (it is enough to modify the default nginx page).
+
+Once the image is built, push it to Docker Hub and provide a link to your repository.
   
   ```
 
