@@ -1,51 +1,38 @@
-# Лабораторная работа №2
-## Задание №1
+# Lab Report No. 2
+## Task No. 1
   
   ```
-Создайте двух пользователей: user1 и user2. Установите для них пароли и
-войдите в систему под именем одного из созданных пользователей.
+Create two users: user1 and user2. Set passwords for them, and log in to the system under the name of one of the created users.
   
   ```
 
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/1.png)
 
-## Задание №2
+## Task No. 2
   
   ```
-Заблокируйте ранее добавленную учетную запись пользователя user1,
-выйдите из системы и убедитесь, что учетная запись больше не может обращаться к
-системе. Затем разблокируйте учетную запись user1. Создайте две новые группы,
-называемые group1 и group2. Выполните команду, которая добавит учетную запись
-user2 в обе эти группы. Используйте одиночную команду для добавления этого
-пользователя сразу к двум группам.
+Lock the previously added user account user1, log out of the system, and ensure that the account can no longer access the system. Then, unlock the user account user1. Create two new groups named group1 and group2. Execute a command that adds the user account user2 to both of these groups. Use a single command to add this user to both groups at once.
   
   ```
   
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/2.png)
 
-## Задание №3
+## Task No. 3
   
   ```
-Добавьте пользователя user2 в соответствующий файл, чтобы пользователь
-имел возможность выполнять команды с привилегиями суперпользователя/root. Войдя
-в систему как пользователь user2, создайте небольшой текстовый файл с любым
-содержимым в каталоге /root.
+Add the user user2 to the appropriate file so that the user has the ability to execute commands with superuser/root privileges. Once logged in as user2, create a small text file with any content in the directory /root.
   
   ```
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/3.png)
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/3_1.png)
 
-## Задание №4
+## Task No. 4
   
   ```
-Войдите в систему под именем пользователя root. Создайте новый каталог в
-домашнем каталоге пользователя root, называемый ‘filemaintenance’. Перейдите в этот
-каталог и создайте три файла: file1, file2 и file3. Вернитесь в родительский каталог
-(домашний каталог root), а затем скопируйте файлы, расположенные в filemaintenance,
-в домашний каталог root.
+Log in to the system as the root user. Create a new directory in the home directory of the root user named 'filemaintenance'. Enter this directory and create three files: file1, file2, and file3. Return to the parent directory (root's home directory), and then copy the files located in filemaintenance to the home directory of root.
   
   ```
 
@@ -54,25 +41,19 @@ user2 в обе эти группы. Используйте одиночную �
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/4_2.png)
 
 
-## Задание №5
+## Task No. 5
   
   ```
-Вернитесь в домашний каталог пользователя root. Переместите каталог
-«filemaintenance» и все его содержимое в другой каталог с именем «movedfiles».
+Return to the home directory of the root user. Move the directory "filemaintenance" and all its contents to another directory named "movedfiles".
   
   ```
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/5.png)
 
-## Задание №6
+## Task No. 6
   
   ```
-Заблокируйте учетную запись user1 еще раз. Выйдите из системы.
-Попытайтесь войти в систему три раза, используя недавно заблокированную учетную
-запись пользователя user1. После третьей неудачной попытки войдите в систему как
-пользователь root и разблокируйте пользователя. Затем просмотрите последние 10
-строк соответствующего файла журнала в системе, которые будут отображать эти
-неудачные попытки входа.
+Lock the user account user1 again. Log out of the system. Try to log in to the system three times using the recently locked user account user1. After the third unsuccessful attempt, log in to the system as the root user and unlock the user. Then, view the last 10 lines of the corresponding log file in the system, which will display these unsuccessful login attempts.
   
   ```
 
@@ -81,35 +62,29 @@ user2 в обе эти группы. Используйте одиночную �
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/6_2.png)
 
 
-## Задание №7
+## Task No. 7
   
   ```
-Войдите в систему под учетной записью root, произведите поиск в системе
-файла конфигурации с названием «ld.so.conf» и вызовите строку с его
-местоположением и адресом. Перенаправьте содержимое этого файла во второй файл
-с именем ld.so.conf.out в вашем домашнем каталоге.
+Log in to the system as the root user, search the system for the configuration file named "ld.so.conf", and retrieve the line containing its location and address. Redirect the contents of this file to a second file named ld.so.conf.out in your home directory.
   
   ```
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/7.png)
 
-## Задание №8
+## Task No. 8
   
   ```
-Скопируйте следующие файлы в домашний каталог пользователя root:
+Copy the following files to the home directory of the root user:
 • /etc/hosts
 • /var/log/
 dmesg• /usr/bin/whoami
-Измените права доступа каждого файла следующим образом:
+Change the permissions of each file as follows:
 • hosts
-— только пользователь-владелец файла может
-читать/записывать/выполнять, нет прав доступа для группы и остальных
-пользователей
+— Only the owner of the file can read/write/execute, no access rights for the group and other users.
 • dmesg
-– пользователь-владелец может читать/записывать, группа и остальные
-пользователи — читать/выполнять
+– The owner can read/write, the group and other users can read/execute.
 • whoami
-— каждый имеет право на выполнение, никаких других разрешений
+— Everyone has permission to execute, no other permissions.
   
   ```
 
@@ -117,55 +92,42 @@ dmesg• /usr/bin/whoami
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/8_1.png)
 
 
-## Задание №9
+## Task No. 9
   
   ```
-Измените владельца и группу всех файлов выше, чтобы они принадлежали user2
+Change the owner and group of all files above so that they belong to user2.
   
   ```
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/9.png)
 
-## Задания №10-12
+## Task No. 10-12
   
   ```
-Войдите в систему как root, если вы еще этого не сделали. Создайте задание
-cron, которое будет создавать список всех пользователей, каталоги которых имеются в
-домашнем каталоге (home) каждый день в полдень и сохранять данный список в
-файле, называемом «cronoutput.out», который вы создадите в своей домашней
-директории.
+Log in as root if you haven't already done so. Create a cron job that will generate a list of all users whose directories exist in the home directory every day at noon and save this list to a file named "cronoutput.out" that you will create in your home directory.
 
-Создайте еще одно задание cron, выполняющее тот же процесс, что и
-последний, в 15 минут каждого часа (0:15, 1:15, 2:15 и т.д).
+Create another cron job that performs the same process as the last one at 15 minutes past every hour (0:15, 1:15, 2:15, etc.).
 
-Создайте еще одно задание cron, которое выполняет тот же процесс, что и
-последние два, но каждые 3 минуты между полуночью и 1:00 каждого 1-го числа
-месяца.
+Create another cron job that performs the same process as the last two, but every 3 minutes between midnight and 1:00 on the 1st day of each month.
   
   ```
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/10.png)
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/10_1.png)
 
-## Задание №13
+## Task No. 13
   
   ```
-Выполните команду для подготовки вашей системы к установке пакетов,
-используя apt-get или yum. Произведите поиск доступных пакетов и описаний для веб-
-сервера Apache. Перенаправьте эти результаты в файл с именем «search.out» в
-домашнем каталоге root.
+Execute the command to prepare your system for package installation using apt-get or yum. Perform a search for available packages and descriptions for the Apache web server. Redirect these results to a file named "search.out" in the root's home directory.
   
   ```
 
 ![Статус](https://github.com/dif-dif/os_admin/blob/third_semester/lab2_commands/img/13.png)
 
-## Задание №14
+## Task No. 14
   
   ```
-Установите все доступные системные обновления для вашей системы. Так
-же, установите веб-сервер Apache. При выполнении установки передайте
-соответствующий параметр в командную строку, чтобы вас не попросили подтвердить
-установку.
+Install all available system updates for your system. Also, install the Apache web server. When performing the installation, pass the appropriate parameter to the command line to avoid being prompted to confirm the installation.
   
   ```
 
