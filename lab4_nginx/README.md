@@ -18,7 +18,7 @@ git clone https://github.com/dif-dif/ansible.git
 3. Edit the IP addresses in the Vagrantfile (if necessary) and set the path to your public SSH key (/home/sirius/.ssh/id_rsa.pub).
 4. Start the virtual machines:
 ```
-vagrant status (убеждаемся что машины существуют, но не запущены)
+vagrant status (Ensure that the machines exist but are not running)
 vagrant up
 ```
 5. Run the playbook.
