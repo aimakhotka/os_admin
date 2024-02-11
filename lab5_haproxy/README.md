@@ -20,7 +20,7 @@ git clone https://github.com/dif-dif/ansible.git
 >("/home/sirius/.ssh/id_rsa.pub")
 4. Bring up the virtual machines.
 ```
-vagrant status (убеждаемся что машины существуют, но не запущены)
+vagrant status (Ensure that the machines exist but are not running)
 vagrant up
 ```
 5. Run the playbook.
